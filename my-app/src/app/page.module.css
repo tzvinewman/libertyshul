@@ -1,0 +1,41 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  background-image: url(background2.webp);
+  background-size: 4px 4px;
+  background-size: contain;
+  box-sizing: border-box;
+  font-family: 'vilna', 'Times New Roman', Times, serif;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  max-width: calc(100% - 1px);
+  min-height: 100vh;
+  min-width: 320px;
+  padding: 0;
+  text-size-adjust: none;
+  width: 100vw;
+}
+
+main {
+  background-image: url(background2.webp);
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  order: 2;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-rows: 1fr 0.8fr 170px;
+    height: calc(100vh - 105px);
+  }
+}
